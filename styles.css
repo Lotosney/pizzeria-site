@@ -5,7 +5,6 @@
 }
 
 body {
-    /* font-family: cursive; */
     font-family: 'Roboto';
 }
 
@@ -17,7 +16,6 @@ li {
     list-style: none;
 }
 
-/* NAVBAR STYLING STARTS */
 .navbar {
     display: flex;
     align-items: center;
@@ -32,12 +30,12 @@ li {
     color: rgb(255, 238, 0);
 }
 
-/* LOGO */
+
 .logo {
     font-size: 32px;
 }
 
-/* NAVBAR MENU */
+
 .menu {
     display: flex;
     gap: 1em;
@@ -47,38 +45,71 @@ li {
 
 
 .menu li a:hover {
-    color:red
-
+    color: red
 }
+
 .menu li {
     padding: 5px 14px;
 }
 
 
 
-/*RESPONSIVE NAVBAR MENU STARTS*/
-/* CHECKBOX HACK */
+
 input[type="checkbox"] {
     display: none;
 }
 
-/*HAMBURGER MENU*/
 .hamburger {
     display: none;
     font-size: 24px;
     user-select: none;
 }
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
 
-/* APPLYING MEDIA QUERIES */
+.about {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    color: rgb(255, 238, 0);
+    font-family: cursive;
+}
+
+.about-text__container {
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20%;
+    border-radius: 25px;
+}
+
+.about-text__container-header {
+    text-align: center;
+    padding: 10px;
+}
+
+.about-text__container-text {
+    text-align: justify;
+    padding: 10px;
+
+}
 @media (max-width: 768px) {
     .menu {
         display: none;
         position: absolute;
-        background-color: rgb(0, 0, 0);;
+        background-color: rgb(0, 0, 0);
+        ;
         right: 0;
         left: 0;
         text-align: center;
         padding: 16px 0;
+        z-index: 2;
     }
 
     .menu li a :hover {
@@ -98,6 +129,35 @@ input[type="checkbox"] {
         display: block;
     }
 
+    .myVideo {
+        display: none;
+    
+    }
+
+    .about {
+        background-image: url("videos/pizza.jpg");
+        min-height: 100%;
+    }
+
+    .about-text__container {
+        background-color: rgb(0, 0, 0, 0.7);
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 250px;
+        border-radius: 25px;
+    }
+
+    .about-text__container-header {
+        text-align: center;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .about-text__container-text {
+        text-align: center;
+        padding: 10px;
+        font-size: 13px;
+    }
 
 }
 
